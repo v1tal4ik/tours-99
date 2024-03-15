@@ -1,0 +1,15 @@
+.btn {
+	padding: 12px 16px;
+	border-radius: 4px;
+
+	&.primary {
+		color: #fff;
+		background: #3687ee;
+	}
+
+	&.secondary {
+		border: 1px solid #3687ee;
+		color: #3687ee;
+		background: #fff;
+	}
+}

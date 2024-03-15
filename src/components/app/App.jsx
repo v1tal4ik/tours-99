@@ -3,12 +3,15 @@ import Tours from '../tours/Tours';
 import Footer from '../footer/Footer';
 
 const App = () => {
+	// 'dark'
+	const theme = 'ligth';
+
 	return (
-		<>
-			<Header />
-			<Tours />
+		<div className='app-container'>
+			<Header theme={theme} />
+			<Tours theme={theme} />
 			<Footer />
-		</>
+		</div>
 	);
 };
 
