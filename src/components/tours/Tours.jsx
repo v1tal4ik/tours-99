@@ -52,14 +52,14 @@ const Tours = ({ theme }) => {
 	return (
 		<main
 			className={clsx('tours-page', {
-				light: theme === 'ligth',
+				light: theme === 'light',
 				dark: theme === 'dark',
 			})}>
 			<h4>Tours Page</h4>
-			<ul>
-				{toursArray.map((tour) => {
-					return <TourItem key={tour.id} {...tour} />;
-				})}
+			<ul className='tours-list'>
+				{toursArray.map((tour) => (
+					<TourItem key={tour.id} {...tour} />
+				))}
 			</ul>
 		</main>
 	);

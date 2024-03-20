@@ -1,6 +1,18 @@
-.profile-status {
-	color: green;
-	.offline {
-		color: red;
+.tour-item {
+	list-style: none;
+
+	min-height: 200px;
+	padding: 10px 20px;
+	background: #c9c9c9;
+	border: 1px solid #000;
+	border-radius: 6px;
+	.tour-item-row {
+		height: 30px;
+		display: flex;
+		justify-content: flex-start;
+		.title {
+			margin-right: 8px;
+			font-weight: 700;
+		}
 	}
 }

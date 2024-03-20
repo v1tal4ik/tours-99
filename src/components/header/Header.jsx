@@ -7,7 +7,7 @@ const Header = ({ theme }) => {
 		<header>
 			<SiYourtraveldottv />
 
-			<button className='btn secondary'>Toggle Theme:{theme === 'ligth' ? 'dark' : 'light'}</button>
+			<button className='btn primary'>Toggle Theme:{theme === 'ligth' ? 'dark' : 'light'}</button>
 		</header>
 	);
 };

@@ -1,6 +1,9 @@
 .btn {
 	padding: 12px 16px;
 	border-radius: 4px;
+	&:hover {
+		cursor: pointer;
+	}
 
 	&.primary {
 		color: #fff;

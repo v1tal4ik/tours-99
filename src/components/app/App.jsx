@@ -4,7 +4,7 @@ import Footer from '../footer/Footer';
 
 const App = () => {
 	// 'dark'
-	const theme = 'ligth';
+	const theme = 'light';
 
 	return (
 		<div className='app-container'>

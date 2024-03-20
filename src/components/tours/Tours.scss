@@ -1,14 +1,20 @@
 .tours-page {
 	padding: 10px 40px;
 	height: calc(100vh - 160px);
-}
+	overflow-y: auto;
+	&.light {
+		background: #f7fafc;
+		color: #30313d;
+	}
 
-.light {
-	background: #f7fafc;
-	color: #30313d;
-}
-
-.dark {
-	background: #1a1f36;
-	color: #fff;
+	&.dark {
+		background: #1a1f36;
+		color: #fff;
+	}
+	.tours-list {
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(auto-fill, minmax(400px, 500px));
+		gap: 40px;
+	}
 }
