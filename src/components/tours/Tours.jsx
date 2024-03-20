@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-
 import TourItem from '../tour-item/TourItem';
 
 import './Tours.scss';
@@ -48,7 +47,6 @@ const toursArray = [
 ];
 
 const Tours = ({ theme }) => {
-	console.log(theme);
 	return (
 		<main
 			className={clsx('tours-page', {
@@ -56,6 +54,7 @@ const Tours = ({ theme }) => {
 				dark: theme === 'dark',
 			})}>
 			<h4>Tours Page</h4>
+
 			<ul className='tours-list'>
 				{toursArray.map((tour) => (
 					<TourItem key={tour.id} {...tour} />

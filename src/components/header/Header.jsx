@@ -1,13 +1,17 @@
+import { useState } from 'react';
 import { SiYourtraveldottv } from 'react-icons/si';
 
 import './Header.scss';
 
-const Header = ({ theme }) => {
+const Header = (props) => {
 	return (
 		<header>
 			<SiYourtraveldottv />
 
-			<button className='btn primary'>Toggle Theme:{theme === 'ligth' ? 'dark' : 'light'}</button>
+			<button className='btn primary' onClick={props.toggleTheme}>
+				Toggle Theme
+				{/* {theme} */}
+			</button>
 		</header>
 	);
 };
