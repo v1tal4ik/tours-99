@@ -1,6 +1,6 @@
 .tours-page {
 	padding: 10px 40px;
-	height: calc(100vh - 160px);
+	height: calc(100vh - 200px);
 	overflow-y: auto;
 	&.light {
 		background: #f7fafc;
@@ -10,6 +10,11 @@
 	&.dark {
 		background: #1a1f36;
 		color: #fff;
+	}
+	&-top {
+		display: grid;
+		grid-template-columns: 100px 300px 100px;
+		justify-content: space-between;
 	}
 	.tours-list {
 		display: grid;

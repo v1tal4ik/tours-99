@@ -3,10 +3,12 @@ import clsx from 'clsx';
 
 import { fetchTours } from '../../helpers/getTours';
 import TourItem from '../tour-item/TourItem';
+import TourForm from '../tourForm/TourForm';
 
 import './Tours.scss';
 
 const Tours = ({ theme }) => {
+	const [isOpen, setIsOpen] = useState(false);
 	const [tours, setTours] = useState([]);
 
 	useEffect(() => {
@@ -30,7 +32,15 @@ const Tours = ({ theme }) => {
 		}
 	}, []);
 
-	// console.log('render Tours', tours);
+	// Modal actions
+
+	const handleOpenModal = () => {
+		setIsOpen(true);
+	};
+
+	const handleCloseModal = () => {
+		setIsOpen(false);
+	};
 
 	return (
 		<main
@@ -38,7 +48,15 @@ const Tours = ({ theme }) => {
 				light: theme === 'light',
 				dark: theme === 'dark',
 			})}>
-			<h4>Tours Page</h4>
+			<div className='tours-page-top'>
+				<h4>Tours Page</h4>
+				<input type='text' />
+				<button className='btn secondary' onClick={handleOpenModal}>
+					Add tour
+				</button>
+			</div>
+
+			<TourForm visible={isOpen} onClose={handleCloseModal} />
 
 			<ul className='tours-list'>
 				{tours.length > 0 ? (

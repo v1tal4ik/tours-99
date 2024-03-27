@@ -1,0 +1,24 @@
+.tour-form {
+	position: fixed;
+	width: 600px;
+	background: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #000;
+	padding: 20px 40px;
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	form {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px 5px;
+
+		input {
+			min-height: 40px;
+		}
+	}
+}

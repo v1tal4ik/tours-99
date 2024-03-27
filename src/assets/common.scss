@@ -16,3 +16,15 @@
 		background: #fff;
 	}
 }
+
+.common-input-wrapper {
+	label {
+		display: block;
+	}
+	input,
+	textarea {
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+}
