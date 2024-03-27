@@ -42,6 +42,13 @@ const Tours = ({ theme }) => {
 		setIsOpen(false);
 	};
 
+	const handleAddTour = (tourItem) => {
+		setTours((prevState) => {
+			// return new state
+			return [...prevState, tourItem];
+		});
+	};
+
 	return (
 		<main
 			className={clsx('tours-page', {
@@ -56,7 +63,7 @@ const Tours = ({ theme }) => {
 				</button>
 			</div>
 
-			<TourForm visible={isOpen} onClose={handleCloseModal} />
+			<TourForm visible={isOpen} onClose={handleCloseModal} onAddTour={handleAddTour} />
 
 			<ul className='tours-list'>
 				{tours.length > 0 ? (

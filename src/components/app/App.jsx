@@ -6,7 +6,7 @@ import Tours from '../tours/Tours';
 import Footer from '../footer/Footer';
 
 const App = () => {
-	const [theme, setTheme] = useState('dark');
+	const [theme, setTheme] = useState('light');
 	const [lastUpdatedDate, setLastUpdatedDate] = useState(null);
 
 	useEffect(() => {
