@@ -2,9 +2,9 @@ import clsx from 'clsx';
 
 import './TourItem.scss';
 
-const TourItem = ({ name, price, description }) => {
+const TourItem = ({ id, name, price, description, continent, ageCategory, isHot, onDelete }) => {
 	return (
-		<li className={clsx('tour-item')}>
+		<li className={clsx('tour-item', { isHot: isHot })}>
 			<div className='tour-item-row'>
 				<p className='title'>Name:</p>
 				<p>{name}</p>
@@ -20,7 +20,21 @@ const TourItem = ({ name, price, description }) => {
 					<p>{description}</p>
 				</div>
 			)}
-			<div className='tou'></div>
+			<div className='tour-item-row'>
+				<p className='title'>Continent:</p>
+				<p>{continent}</p>
+			</div>
+			{ageCategory && (
+				<div className='tour-item-row'>
+					<p className='title'>Age category:</p>
+					<p>{ageCategory}</p>
+				</div>
+			)}
+			<div className='tour-item-row'>
+				<button className='btn secondary' onClick={() => onDelete(id)}>
+					Delete
+				</button>
+			</div>
 		</li>
 	);
 };
